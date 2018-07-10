@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <FrameLayout
+        android:id="@+id/frame_activity"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </FrameLayout>
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/radio_button1"
+            android:drawableTop="@drawable/rg_button_spreed1"
+            android:layout_weight="1"
+            android:text="本地音乐"
+            android:gravity="center"
+            android:button="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/radio_button2"
+            android:drawableTop="@drawable/rg_button_spreed1"
+            android:layout_weight="1"
+            android:text="发现音乐"
+            android:gravity="center"
+            android:button="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/radio_button3"
+            android:drawableTop="@drawable/rg_button_spreed1"
+            android:layout_weight="1"
+            android:text="我的音乐"
+            android:gravity="center"
+            android:button="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/radio_button4"
+            android:layout_weight="1"
+            android:text="账号信息"
+            android:gravity="center"
+            android:button="@android:color/transparent"
+            android:drawableTop="@drawable/rg_button_spreed1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+
+
+
+
+</LinearLayout>

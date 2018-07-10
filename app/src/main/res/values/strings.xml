@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MobilePlay2</string>
+    <string name="filename">音乐文件名称</string>
+    <string name="playbutton">播放</string>
+    <string name="pausebutton">暂停</string>
+    <string name="resetbutton">重播</string>
+    <string name="stopbutton">停止</string>
+    <string name="filenoexist">失败</string>
+    <string name="continues">是吧</string>
+</resources>
