@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:background="@android:color/white"
     tools:context=".SplashActivity">
+
     <ImageView
         android:id="@+id/sp_splash_icon"
         android:layout_width="80dp"

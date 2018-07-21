@@ -19,6 +19,7 @@ import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
 
+import static com.gnohz.oahz.mobileplay2.pager.FindMusicPager.mediaItems;
 import static com.gnohz.oahz.mobileplay2.pager.LocalMusicPager.list;
 
 public class Player extends Activity {
@@ -35,10 +36,12 @@ public class Player extends Activity {
     private ImageButton imageButton4;
 
 
+
     private SeekBar seekBar;
 
     protected static String music_uri;
     private int music_position;
+    private int music_netposition;
 
 
 
@@ -48,14 +51,17 @@ public class Player extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_player);
+        textView = findViewById(R.id.musicname);
         Intent intent = getIntent();
         if(intent.getExtras().containsKey("bun")){
             Bundle bundle = intent.getBundleExtra("bun");
             music_position = bundle.getInt("data1");
+            textView.setText(list.get(music_position).getItemname());
         }
         if(intent.getExtras().containsKey("bunnet")){
-            Bundle bundle = intent.getBundleExtra("bun");
-            music_position = bundle.getInt("datanet");
+            Bundle bundle = intent.getBundleExtra("bunnet");
+            music_netposition = bundle.getInt("datanet");
+            textView.setText(mediaItems.get(music_netposition).getItemname());
         }
 
 
@@ -68,8 +74,8 @@ public class Player extends Activity {
 //        music_uri = data02;
         bindServiceConnection();
         musicService = new MusicService();
-        textView = findViewById(R.id.musicname);
-        textView.setText(list.get(music_position).getItemname());
+
+
 //        isPlay =  findViewById(R.id.playbutton);
 //        isPlay.setOnClickListener(new myOnClickListener());
         imageButton =  findViewById(R.id.imagebutton);
@@ -77,6 +83,7 @@ public class Player extends Activity {
         imageButton2 = findViewById(R.id.star_music);
         imageButton3 = findViewById(R.id.pause_music);
         imageButton4 = findViewById(R.id.next_music);
+
 //        quit =  findViewById(R.id.pausebutton);
 //        quit.setOnClickListener(new myOnClickListener());
         imageButton1.setOnClickListener(new myOnClickListener());
@@ -94,6 +101,7 @@ public class Player extends Activity {
                 quit();
             }
         });
+
 
 
 

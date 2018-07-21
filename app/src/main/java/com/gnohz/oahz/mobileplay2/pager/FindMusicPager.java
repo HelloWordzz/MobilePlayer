@@ -36,7 +36,7 @@ public class FindMusicPager extends BasePager {
 
     @ViewInject(R.id.find_progressbar)
     private ProgressBar findprogressBar;
-    private ArrayList<MediaItem> mediaItems  = new ArrayList<>();
+    public static ArrayList<MediaItem> mediaItems  = new ArrayList<>();
     private Mediaclassadapt1 mediaclassadapt2 = new Mediaclassadapt1();
     public static int positionnetmusic;
 
@@ -125,8 +125,8 @@ public class FindMusicPager extends BasePager {
             JSONObject jsonObject = new JSONObject(result);
             JSONObject jsonArray = jsonObject.optJSONObject("data");
 //            int a = jsonArray.length();
-////            String b = a+"";
-////            Toast.makeText(context,b+"",Toast.LENGTH_LONG).show();
+//////            String b = a+"";
+//////            Toast.makeText(context,b+"",Toast.LENGTH_LONG).show();
 
 
 

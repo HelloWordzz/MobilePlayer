@@ -4,35 +4,43 @@
     android:orientation="vertical"
     android:layout_height="match_parent">
     <LinearLayout
+        android:background="#424242"
         android:layout_width="match_parent"
-        android:layout_height="100dp">
-        <ImageView
-            android:layout_width="80dp"
-            android:src="@drawable/ic_love"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_height="80dp" />
+        android:layout_height="50dp"
+        android:orientation="vertical">
         <TextView
-            android:id="@+id/text"
-            android:layout_width="wrap_content"
-            android:textColor="#000000"
+            android:text="MV世界"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@android:color/white"
             android:textSize="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="20dp"
-            android:layout_height="wrap_content"
-            android:text="我喜欢的音乐"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
-    <View
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:background="#55000000"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_height="3dp"/>
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-    </ListView>
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:progressDrawable="@drawable/pg"
+            android:visibility="gone"
+
+            />
+
+        <WebView
+            android:id="@+id/yinyuetai"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+
+
+
 
 
 </LinearLayout>
